@@ -28,3 +28,4 @@ git checkout -f branch - отмена локальных изменений дл
 git checkout (номер версии sha 1 id) - смена версии по комиту
 git commit --amend - поменять название последнего commit, а также зальются новые отслеживаемые изменения.
 git reset HEAD CONTRIBUTING.md - отменяет отслеживание файла.
+sda
