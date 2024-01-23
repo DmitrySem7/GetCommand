@@ -105,3 +105,6 @@ git push origin --delete 'branch' - удаление ветки на серве�
 git remote add origin git@github.com:DmitrySem7/cuddly-doodle.git
 git branch -M main
 git push -u origin main
+
+
+test update
