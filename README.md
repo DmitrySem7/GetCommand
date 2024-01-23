@@ -107,5 +107,6 @@ git branch -M main
 git push -u origin main
 
 
-test update
-test update2
+Копирование ветки из github-репозитория в локальный:
+git branch --all - позволяет проверить все ветки, в том числе и из репозитория.
+git checkout -b remote_branch origin/remote_branch - затем копируем по следующему принципу. Создаём новую ветку с аналогичным названием, прыгаем в неё, заливаем
