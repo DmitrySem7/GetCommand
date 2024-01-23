@@ -26,8 +26,49 @@ git rm 'file' - УДАЛЯЕТ ФАЙЛ ВПРИНЦИПЕ.  git rm --cached 'fi
 git mv 'file' - стандарт перемещение
 git checkout -f branch - отмена локальных изменений для последующего прыжка.
 git checkout (номер версии sha 1 id) - смена версии по комиту
+git checkout 'branch' - прыжок на нужную ветку
 it checkout -- CONTRIBUTING.md - откат изменения в файле
+git commit -m "Story 182: fix benchmarks for speed" - коммит с записью. -a - добавление всех изменений автоматически
 git commit --amend - поменять название последнего commit, а также зальются новые отслеживаемые изменения.
-git reset HEAD CONTRIBUTING.md - отменяет отслеживание файла.
-sda
-sadawrwo31
+git switch -     - откатывает изменения, если HEAD detached at.
+git restore 'file' - откатывет изменения в файле
+
+-------------------Теги--------------------
+git tag - просмотр имеющихся тегов
+git tag -l "v1.8.5*" - поиск по тегу
+Аннотированные теги пример создания:
+$ git tag -a v1.4 -m "my version 1.4"
+$ git tag
+v0.1
+v1.3
+v1.4
+
+git show <tag> - для его проверки
+
+Легковесные теги
+Создание - git tag <v1.4-l>
+
+Можно пометить тегом старые коммиты:
+git tag -a v1.2 9fceb02 (последнее - это контрольная сумма коммита или его часть)
+
+git не отправляет теги. Их нужно запушить:
+git push origin <tagname>
+Или для отправки сразу множества:
+git push origin --tags
+
+git tag -d <tagname> - удаление тегов
+git checkout v2.0.0 - переход на тег. Однако это создаст detached HEAD. 
+--------------------------------
+Псевдонимы
+git config --global alias.ci commit - пример настройки. вместо ввода git commit, вам достаточно набрать только git ci
+
+
+-------------------Удалённые репозитории---------------
+
+git remote - просмотр удалённых репозиториев
+git remote add pb https://github.com/paulboone/ticgit - добавление в удалённый репозиторий
+git fetch [remote-name] - получение изменений в удалённом репозитории
+git push origin master - отправка изменений
+git remote show <remote> - просмотр уд. репоз.
+git remote rename pb 'rep' - переименовывание репа
+git remote remove 'rep' - удаление репозитория
